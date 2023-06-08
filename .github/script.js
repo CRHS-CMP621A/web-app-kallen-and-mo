@@ -28,7 +28,7 @@ $(".calculator input").on("input change", function (event) {
     var cardio = parseInt($("#calc-cardio").val(), 10);
     var gender = $(".calculator input[name='gender']:checked").val();
 
-    // The Harris–Benedict equations revised by Mifflin and St Jeor in 1990: 'A new predictive equation for resting energy expenditure in healthy individuals'
+    
     var bmr = parseInt(10 * weight + 6.25 * height - 5 * age, 10) + (gender === "male" ? 5 : -161);
     bmr = bmr * 1.2;
     bmr += walking * 60 * (.03 * weight * 1 / 0.45) / 7;
